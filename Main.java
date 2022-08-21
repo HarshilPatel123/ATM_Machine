@@ -7,30 +7,30 @@ public class MainClass {
         AtmOperationInterf op=new AtmOperationImpl();
         int atmnumber=12345;
         int atmpin=123;
-        Scanner in=new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
         System.out.println("Welcome to ATM Machine !!!");
-        System.out.print("Enter Atm Number : ");
-        int atmNumber=in.nextInt();
+        System.out.print("Enter Atm Card Number : ");
+        int atmNumber=sc.nextInt();
         System.out.print("Enter Pin: ");
-        int pin=in.nextInt();
+        int pin=sc.nextInt();
         if((atmnumber==atmNumber)&&(atmpin==pin)){
             while(true){
                 System.out.println("1.View Available Balance\n2.Withdraw Amount\n3.Deposit Amount\n4.View Ministatement\n5.Exit");
                 System.out.println("Enter Choice : ");
-                int ch=in.nextInt();
+                int ch=sc.nextInt();
                 if(ch==1){
                     op.viewBalance();
 
                 }
                 else if(ch==2){
                     System.out.println("Enter amount to withdraw ");
-                    double withdrawAmount=in.nextDouble();
+                    double withdrawAmount=sc.nextDouble();
                     op.withdrawAmount(withdrawAmount);
 
                 }
                 else if(ch==3){
                     System.out.println("Enter Amount to Deposit :");
-                    double depositAmount=in.nextDouble();//5000
+                    double depositAmount=sc.nextDouble();//5000
                     op.depositAmount(depositAmount);
 
 
@@ -50,7 +50,7 @@ public class MainClass {
             }
         }
         else{
-            System.out.println("Incorrect Atm Number or pin");
+            System.out.println("Incorrect Atm Card Number or pin");
             System.exit(0);
         }
 
