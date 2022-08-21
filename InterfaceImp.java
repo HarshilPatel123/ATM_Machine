@@ -1,4 +1,4 @@
-package com.sjprogramming;
+package com.ATMPROJECT;
 
 import java.util.HashMap;
 import java.util.Map;
